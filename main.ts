@@ -27,7 +27,11 @@ basic.forever(function () {
             if (texte == 3) {
                 basic.showIcon(IconNames.Rabbit)
             } else {
-            	
+                if (texte == 4) {
+                    basic.showIcon(IconNames.No)
+                } else {
+                	
+                }
             }
         }
     }
