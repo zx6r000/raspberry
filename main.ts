@@ -1,8 +1,13 @@
 serial.onDataReceived(serial.delimiters(Delimiters.NewLine), function () {
-    basic.showString(serial.readLine())
+    if (serial.readLine() == "Micro Bit connected") {
+        basic.showIcon(IconNames.StickFigure)
+        texte = 0
+    } else {
+        basic.showString(serial.readLine())
+    }
 })
 input.onButtonPressed(Button.A, function () {
-    if (texte < 10) {
+    if (texte < 5) {
         texte += 1
     } else {
         texte = 0
